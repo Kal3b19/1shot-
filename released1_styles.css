@@ -1,0 +1,301 @@
+*{
+    margin: 0px;
+    font-family: Permanent Marker;
+    scroll-behavior: smooth;
+}
+
+.event{
+    height: 120px;
+    background-image: linear-gradient(to bottom right, red, purple);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.header{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 645px;
+    justify-content: end;
+    color: white;
+    padding-top: 15px;
+
+}
+.header ul{
+    display: flex;
+    list-style-type: none;
+    
+} 
+
+.header ul li {
+    display: block;
+    padding-right: 40px;
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: .2s;
+    cursor: pointer;
+    margin: 0px 5px;
+    color: #fff;
+}
+
+.header ul li:hover {
+    color:white;
+    background-color: black;
+    font-size: 28px;
+
+
+}
+
+.header ul li.active{
+    background-color: black;
+}
+
+.header ul  a:link{
+    text-decoration: none;
+}
+
+.header .fa-solid{
+    display: none;
+}
+
+/* body*/
+
+.title{
+    background-image: linear-gradient(to bottom right, red, purple);
+    text-align: center;
+    height: 280px;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:  500px 500px;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    row-gap: 198px;
+}
+
+.music_info{
+  background-color: #333;
+  width: 400px;
+  padding: 25px 35px;
+  text-align: center;
+  border-radius: 25px;
+  margin-top: -180px;
+}
+.image{
+    width: 180px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+
+#progress1,
+#progress2,
+#progress3,
+#progress4,
+#progress5,
+#progress6,
+#progress7,
+#progress8,
+#progress9{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+#progress1::-webkit-slider-thumb,
+#progress2::-webkit-slider-thumb,
+#progress3::-webkit-slider-thumb,
+#progress4::-webkit-slider-thumb,
+#progress5::-webkit-slider-thumb,
+#progress6::-webkit-slider-thumb,
+#progress7::-webkit-slider-thumb,
+#progress8::-webkit-slider-thumb,
+#progress9::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 5px rgba(255, 26, 26, 0.22);
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: red;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+
+.Download-BuyNow_btn{
+    height: 45px;
+    width: auto;
+    padding: 5px;
+    font-size: 25px;
+    background-color: rgb(255, 36, 36);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform .5s;
+}
+.Download-BuyNow_btn:hover{
+    transform: scale(.8);
+}
+.music_info p{
+    font-size: 20px;
+}
+
+.contact-left{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+.contact-left p{
+    margin-top: 30px;
+    color: #ababab;
+}
+
+.contact-left p i{
+    color: red;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform .5s;
+}
+
+.social-icons a:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: red;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#contact{
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px){
+.event{
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 100vh;
+}
+.header .fa-bars{
+    display: block;
+    font-size: 45px;
+    margin-right: 0;
+}
+.header ul{
+    background: red;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right .5s;
+    display: block;
+    font-size: 48px;
+}
+
+
+.header ul .fa-solid{
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.header ul .fa-solid{
+    position: absolute;
+    top: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 400px;
+    max-width: 400px;
+    min-width:  200px;
+}
+
+.contact-left, 
+#contact-right{
+    flex-basis: 100%;
+    text-align: center;
+}
+}
