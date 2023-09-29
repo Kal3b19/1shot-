@@ -1,0 +1,318 @@
+*{
+    margin: 0px;
+    font-family: Permanent Marker;
+}
+.event{
+    background-image: url("music_photos/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+}
+/* nav */
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+.logo{
+    font-size: 50px;
+}
+
+
+.header ul{
+    display: flex;
+    list-style-type: none;
+    
+} 
+
+.header ul li {
+    display: block;
+    padding-right: 40px;
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: .2s;
+    cursor: pointer;
+    margin: 0px 5px;
+    color: white;
+}
+
+.header ul li:hover {
+    color:white;
+    background-color: black;
+    font-size: 28px;
+
+
+}
+
+.header ul li.active{
+    background-color: black;
+}
+
+.header ul  a:link{
+    text-decoration: none;
+}
+
+.header .fa-solid{
+    display: none;
+}
+
+/* main body*/
+
+.p1{
+    font-size: 60px; 
+    padding-top: 105px;
+    text-align: center;
+}
+
+.p2{
+    font-size: 60px; 
+    padding-top: 0px; 
+    margin-top: 0px;
+    padding-left: 100px;
+}
+.p3{
+    font-size: 60px;
+    text-align: center;
+    padding-top: 600px;
+    color: red;
+}
+
+.music_info{
+    background-color: #333;
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+    animation: slideInFromTop 1s ease-in;
+    top: 120px;
+    left: 530px;
+    margin-left: -15px;
+}
+
+.image{
+    width: 180px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+#progress9{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+#progress9::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 5px rgba(255, 26, 26, 0.22);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: red;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+
+.Download-BuyNow_btn{
+    height: 45px;
+    width: auto;
+    padding: 5px;
+    font-size: 25px;
+    background-color: rgb(255, 36, 36);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform .5s;
+}
+.Download-BuyNow_btn:hover{
+    transform: scale(.8);
+}
+
+
+
+@keyframes slideInFromside{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+/* Contact ME */
+.contact-left{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: red;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform .5s;
+}
+
+.social-icons a:hover{
+    color: red;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: red;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Responsive*/
+
+@media only screen and (max-width: 650px){
+    .event{
+        background-image: url("music_photos/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        width: 100%;
+        height: 100vh;
+    }
+    .header .fa-bars{
+        display: block;
+        font-size: 35px;
+        margin-right: 25px;
+    }
+    #sidemenu{
+        background: red;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right .5s;
+        display: block;
+        font-size: 28px;
+    }
+
+
+
+    .header .fa-circle-xmark{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .header .fa-circle-xmark{
+        position: absolute;
+        top: 25px;
+    }
+
+    /* body*/
+    .p1{
+        padding-top: 80px;
+        padding-left: 35px;
+        font-size: 35px;
+    }
+    .p2{
+        padding-left: 25px;
+        margin-bottom: 280px;
+        font-size: 40px;
+    }  
+    .p3{
+        padding-left: 25px;
+        font-size: 40px;
+    }
+
+    .music_info{
+        min-width: 200px;
+        top: 210px;
+        left: 25px;
+        margin-left: 15px;
+        max-width: 325px;
+    }
+    .contact-left, 
+    .contact-right{
+        flex-basis: 100%;
+    }
+}
+

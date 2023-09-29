@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1$hot home</title>
+    <link rel="stylesheet" href="1shot_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fd929a184.js" crossorigin="anonymous"></script>
+</head>
+<body class="event">
+    <header>
+        <div class="header">
+            <div class="logo">
+                <p>1$hot Production</p>
+            </div>
+            <div>
+                <ul id="sidemenu">
+                    <a href="index.html" class="active" >
+                        <li>Home</li>
+                    </a>
+
+                    <a href="released1.html" >
+                        <li>Released</li>
+                    </a>
+                    <a href="aboutme.html" >
+                        <li>About Me</li>
+                    </a>
+
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+    
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-350px";
+            }
+        </script>
+    </header>
+
+    <main>
+        <div class="music_info 9">
+            <h2 style="text-align: end; color: white;">New Release</h2>
+            <img src="music_photos/IMG_0452.jpg" class="image">
+            <h1>6ix</h1>
+            <p>1$hot</p>
+            <div class="controls" onClick="playPause9()">
+                <div ><i class="fa-solid fa-play" id="ctrlIcon9"></i></div>
+            </div>
+            <audio id="song9">
+                <source src="Audio/6ix.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress9">
+        </div>
+            <p class="p3"><a href="released1.html" style=" text-decoration: none; color: red; ">Listen Now!!</a></p>
+
+
+      
+
+    </main>
+
+    <div id="contact" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i></i>prodby1shot@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/prod.by1shot/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/prodby_1shot" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://t.co/G3dLGu7HbT" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    let progress9 = document.getElementById("progress9");
+    let song9 = document.getElementById("song9");
+    let ctrlIcon9 = document.getElementById("ctrlIcon9");
+
+    song9.onloadedmetadata = function(){
+        progress9.max = song9.duration;
+        progress9.value = song9.currentTime;
+    }
+        
+    function playPause9(){
+        if(ctrlIcon9.classList.contains("fa-pause")){
+            song9.pause();
+            ctrlIcon9.classList.remove("fa-pause");
+            ctrlIcon9.classList.add("fa-play");
+        }
+        else if(ctrlIcon9.classList.contains("fa-play")){
+            song9.play();
+            ctrlIcon9.classList.add("fa-pause");
+            ctrlIcon9.classList.remove("fa-play");
+        }
+        else{
+            song9.pause();
+        }
+    }
+
+    if(song9.play()){
+        setInterval(()=>{
+            progress9.value = song9.currentTime;
+        },500);
+    }
+    progress9.onchange = function(){
+        song9.play();
+        song9.currentTime = progress9.value;
+        ctrlIcon9.classList.add("fa-pause");
+        ctrlIcon9.classList.remove("fa-play");
+    }
+    </script>
+</body>
+</html>

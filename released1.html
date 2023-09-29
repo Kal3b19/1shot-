@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1$hot</title>
+        <link rel="stylesheet" href="released1_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2fd929a184.js" crossorigin="anonymous"></script>
+    </head>
+    
+    
+    <body class="event">
+        <header>
+            <div class="header">
+                <div>
+                    <ul id="sidemenu">
+                        <a href="index.html" class="active" >
+                            <li>Home</li>
+                        </a>
+    
+                        <a href="released1.html" >
+                            <li>Released</li>
+                        </a>
+                        <a href="aboutme.html" >
+                            <li>About Me</li>
+                        </a>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </div>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+        
+                function openmenu(){
+                    sidemenu.style.right = "0";
+                }
+                function closemenu(){
+                    sidemenu.style.right = "-460px";
+                }
+            </script>
+        </header>
+
+        <h2 class="title" style="padding: 20px; font-size: 70px; font-family: Permanent Marker;">
+            1$hot 
+            Music
+        </h1>
+        <main class="grid">
+
+            <div class="music_info 1">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>Audio</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause()"><i class="fa-solid fa-play" ctrlIcon1></i></div>
+                </div>
+
+                <audio id="song1">
+                    <source src="Audio/AUDIO-9156.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress1">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+                <script>
+
+                let progress = document.getElementById("progress1");
+                let song1= document.getElementById("song1");
+                let ctrlIcon = document.getElementById("ctrlIcon1");
+        
+                song1.onloadedmetadata = function(){
+                    progress.max = song1.duration;
+                    progress.value = song1.currentTime;
+                }
+        
+                function playPause(){
+                    if(ctrlIcon.classList.contains("fa-pause")){
+                            song1.pause();
+                            ctrlIcon.classList.remove("fa-pause");
+                            ctrlIcon.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon.classList.contains("fa-play")){
+                            song1.play();
+                            ctrlIcon.classList.add("fa-pause");
+                            ctrlIcon.classList.remove("fa-play");
+                        }
+                        else{
+                            song1.pause();
+                        }
+                    }
+        
+                if(song1.play()){
+                    setInterval(()=>{
+                        progress.value = song1.currentTime;
+                    },500);
+                }
+                progress.onchange = function(){
+                    song1.play();
+                    song1.currentTime = progress.value;
+                    ctrlIcon.classList.add("fa-pause");
+                    ctrlIcon.classList.remove("fa-play");
+                }
+                </script>
+
+            </div>
+
+            <div class="music_info 2">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>In The Chamber</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause2()"><i class="fa-solid fa-play" id="ctrlIcon2"></i></div>
+                </div>
+                <audio id="song2">
+                    <source src="Audio/In the Chamber.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress2">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress2 = document.getElementById("progress2");
+                    let song2 = document.getElementById("song2");
+                    let ctrlIcon2 = document.getElementById("ctrlIcon2");
+            
+                    song2.onloadedmetadata = function(){
+                        progress2.max = song2.duration;
+                        progress2.value = song2.currentTime;
+                    }
+            
+                    function playPause2(){
+                        if(ctrlIcon2.classList.contains("fa-pause")){
+                            song2.pause();
+                            ctrlIcon2.classList.remove("fa-pause");
+                            ctrlIcon2.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon2.classList.contains("fa-play")){
+                            song2.play();
+                            ctrlIcon2.classList.add("fa-pause");
+                            ctrlIcon2.classList.remove("fa-play");
+                        }
+                        else{
+                            song2.pause();
+                        }
+                    }
+            
+                    if(song2.play()){
+                        setInterval(()=>{
+                            progress2.value = song2.currentTime;
+                        },500);
+                    }
+                    progress2.onchange = function(){
+                        song2.play();
+                        song2.currentTime = progress2.value;
+                        ctrlIcon2.classList.add("fa-pause");
+                        ctrlIcon2.classList.remove("fa-play");
+                    }
+                </script>
+            </div>
+        
+            <div class="music_info 3">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>OC</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause3()"><i class="fa-solid fa-play" id="ctrlIcon3"></i></div>
+                </div>
+                <audio id="song3">
+                    <source src="/Audio/OC.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress3">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress3 = document.getElementById("progress3");
+                    let song3 = document.getElementById("song3");
+                    let ctrlIcon3 = document.getElementById("ctrlIcon3");
+            
+                    song3.onloadedmetadata = function(){
+                        progress3.max = song3.duration;
+                        progress3.value = song3.currentTime;
+                    }
+            
+                    function playPause3(){
+                        if(ctrlIcon3.classList.contains("fa-pause")){
+                            song3.pause();
+                            ctrlIcon3.classList.remove("fa-pause");
+                            ctrlIcon3.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon3.classList.contains("fa-play")){
+                            song3.play();
+                            ctrlIcon3.classList.add("fa-pause");
+                            ctrlIcon3.classList.remove("fa-play");
+                        }
+                        else{
+                            song3.pause();
+                        }
+                    }
+            
+                    if(song3.play()){
+                        setInterval(()=>{
+                            progress3.value = song3.currentTime;
+                        },500);
+                    }
+                    progress3.onchange = function(){
+                        song3.play();
+                        song3.currentTime = progress3.value;
+                        ctrlIcon3.classList.add("fa-pause");
+                        ctrlIcon3.classList.remove("fa-play");
+                    }
+                </script>
+
+            </div>
+            <div class="music_info 4">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>Over It</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause4()"><i class="fa-solid fa-play" id="ctrlIcon4"></i></div>
+                </div>
+                <audio id="song4">
+                    <source src="Audio/Over It.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress4">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress4 = document.getElementById("progress4");
+                    let song4 = document.getElementById("song4");
+                    let ctrlIcon4 = document.getElementById("ctrlIcon4");
+            
+                    song4.onloadedmetadata = function(){
+                        progress4.max = song4.duration;
+                        progress4.value = song4.currentTime;
+                    }
+            
+                    function playPause4(){
+                        if(ctrlIcon4.classList.contains("fa-pause")){
+                            song4.pause();
+                            ctrlIcon4.classList.remove("fa-pause");
+                            ctrlIcon4.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon4.classList.contains("fa-play")){
+                            song4.play();
+                            ctrlIcon4.classList.add("fa-pause");
+                            ctrlIcon4.classList.remove("fa-play");
+                        }
+                        else{
+                            song4.pause();
+                        }
+                    }
+            
+                    if(song4.play()){
+                        setInterval(()=>{
+                            progress4.value = song4.currentTime;
+                        },500);
+                    }
+                    progress4.onchange = function(){
+                        song4.play();
+                        song4.currentTime = progress4.value;
+                        ctrlIcon4.classList.add("fa-pause");
+                        ctrlIcon4.classList.remove("fa-play");
+                    }
+                </script>
+
+            </div>
+
+            <div class="music_info 5">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>Stranger</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause5()"><i class="fa-solid fa-play" id="ctrlIcon5"></i></div>
+                </div>
+                <audio id="song5">
+                    <source src="Audio/Stranger.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress5">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress5 = document.getElementById("progress5");
+                    let song5 = document.getElementById("song5");
+                    let ctrlIcon5 = document.getElementById("ctrlIcon5");
+            
+                    song5.onloadedmetadata = function(){
+                        progress5.max = song5.duration;
+                        progress5.value = song5.currentTime;
+                    }
+            
+                    function playPause5(){
+                        if(ctrlIcon5.classList.contains("fa-pause")){
+                            song5.pause();
+                            ctrlIcon5.classList.remove("fa-pause");
+                            ctrlIcon5.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon5.classList.contains("fa-play")){
+                            song5.play();
+                            ctrlIcon5.classList.add("fa-pause");
+                            ctrlIcon5.classList.remove("fa-play");
+                        }
+                        else{
+                            song5.pause();
+                        }
+                    }
+            
+                    if(song5.play()){
+                        setInterval(()=>{
+                            progress5.value = song5.currentTime;
+                        },500);
+                    }
+                    progress5.onchange = function(){
+                        song5.play();
+                        song5.currentTime = progress5.value;
+                        ctrlIcon5.classList.add("fa-pause");
+                        ctrlIcon5.classList.remove("fa-play");
+                    }
+                </script>
+            </div>
+            <div class="music_info 6">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>You Know</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause6()"><i class="fa-solid fa-play" id="ctrlIcon6"></i></div>
+                </div>
+                <audio id="song6">
+                    <source src="Audio/You Know.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress6">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress6 = document.getElementById("progress6");
+                    let song6 = document.getElementById("song6");
+                    let ctrlIcon6 = document.getElementById("ctrlIcon6");
+            
+                    song6.onloadedmetadata = function(){
+                        progress6.max = song6.duration;
+                        progress6.value = song6.currentTime;
+                    }
+            
+                    function playPause6(){
+                        if(ctrlIcon6.classList.contains("fa-pause")){
+                            song6.pause();
+                            ctrlIcon6.classList.remove("fa-pause");
+                            ctrlIcon6.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon6.classList.contains("fa-play")){
+                            song6.play();
+                            ctrlIcon6.classList.add("fa-pause");
+                            ctrlIcon6.classList.remove("fa-play");
+                        }
+                        else{
+                            song6.pause();
+                        }
+                    }
+                    if(song6.play()){
+                        setInterval(()=>{
+                            progress6.value = song6.currentTime;
+                        },500);
+                    }
+                    progress6.onchange = function(){
+                        song6.play();
+                        song6.currentTime = progress6.value;
+                        ctrlIcon6.classList.add("fa-pause");
+                        ctrlIcon6.classList.remove("fa-play");
+                    }
+                </script>
+            </div>
+            <div class="music_info 7">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>Get Right</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause7()"><i class="fa-solid fa-play" id="ctrlIcon7"></i></div>
+                </div>
+                <audio id="song7">
+                    <source src="Audio/Get Right.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress7">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress7 = document.getElementById("progress7");
+                    let song7 = document.getElementById("song7");
+                    let ctrlIcon7 = document.getElementById("ctrlIcon7");
+            
+                    song7.onloadedmetadata = function(){
+                        progress7.max = song7.duration;
+                        progress7.value = song7.currentTime;
+                    }
+            
+                    function playPause7(){
+                        if(ctrlIcon7.classList.contains("fa-pause")){
+                            song7.pause();
+                            ctrlIcon7.classList.remove("fa-pause");
+                            ctrlIcon7.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon7.classList.contains("fa-play")){
+                            song7.play();
+                            ctrlIcon7.classList.add("fa-pause");
+                            ctrlIcon7.classList.remove("fa-play");
+                        }
+                        else{
+                            song7.pause();
+                        }
+                    }
+            
+                    if(song7.play()){
+                        setInterval(()=>{
+                            progress7.value = song7.currentTime;
+                        },500);
+                    }
+                    progress7.onchange = function(){
+                        song7.play();
+                        song7.currentTime = progress7.value;
+                        ctrlIcon7.classList.add("fa-pause");
+                        ctrlIcon7.classList.remove("fa-play");
+                    }
+                </script>
+            </div>
+
+            <div class="music_info 8">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>GO</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause8()"><i class="fa-solid fa-play" id="ctrlIcon8"></i></div>
+                </div>
+                <audio id="song8">
+                    <source src="Audio/GO.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress8">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress8 = document.getElementById("progress8");
+                    let song8 = document.getElementById("song8");
+                    let ctrlIcon8 = document.getElementById("ctrlIcon8");
+            
+                    song8.onloadedmetadata = function(){
+                        progress8.max = song8.duration;
+                        progress8.value = song8.currentTime;
+                    }
+            
+                    function playPause8(){
+                        if(ctrlIcon8.classList.contains("fa-pause")){
+                            song8.pause();
+                            ctrlIcon8.classList.remove("fa-pause");
+                            ctrlIcon8.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon8.classList.contains("fa-play")){
+                            song8.play();
+                            ctrlIcon8.classList.add("fa-pause");
+                            ctrlIcon8.classList.remove("fa-play");
+                        }
+                        else{
+                            song8.pause();
+                        }
+                    }
+            
+                    if(song8.play()){
+                        setInterval(()=>{
+                            progress8.value = song8.currentTime;
+                        },500);
+                    }
+                    progress8.onchange = function(){
+                        song8.play();
+                        song8.currentTime = progress8.value;
+                        ctrlIcon8.classList.add("fa-pause");
+                        ctrlIcon8.classList.remove("fa-play");
+                    }
+                </script>
+
+            </div>
+            <div class="music_info 9">
+                <img src="music_photos/IMG_0452.jpg" class="image">
+                <h1>6ix</h1>
+                <p>1$hot</p>
+                <div class="controls">
+                    <div onclick="playPause9()"><i class="fa-solid fa-play" id="ctrlIcon9"></i></div>
+                </div>
+                <audio id="song9">
+                    <source src="Audio/6ix.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress9">
+                <button class="Download-BuyNow_btn">
+                    Download-BuyNow
+                </button>
+
+                <script>
+
+                    let progress9 = document.getElementById("progress9");
+                    let song9 = document.getElementById("song9");
+                    let ctrlIcon9 = document.getElementById("ctrlIcon9");
+            
+                    song9.onloadedmetadata = function(){
+                        progress9.max = song9.duration;
+                        progress9.value = song9.currentTime;
+                    }
+            
+                    function playPause9(){
+                        if(ctrlIcon9.classList.contains("fa-pause")){
+                            song9.pause();
+                            ctrlIcon9.classList.remove("fa-pause");
+                            ctrlIcon9.classList.add("fa-play");
+                        }
+                        else if(ctrlIcon9.classList.contains("fa-play")){
+                            song9.play();
+                            ctrlIcon9.classList.add("fa-pause");
+                            ctrlIcon9.classList.remove("fa-play");
+                        }
+                        else{
+                            song9.pause();
+                        }
+                    }
+            
+                    if(song9.play()){
+                        setInterval(()=>{
+                            progress9.value = song9.currentTime;
+                        },500);
+                    }
+                    progress9.onchange = function(){
+                        song9.play();
+                        song9.currentTime = progress9.value;
+                        ctrlIcon9.classList.add("fa-pause");
+                        ctrlIcon9.classList.remove("fa-play");
+                    }
+                </script>
+            </div>
+        </main>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i></i>prodby1shot@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/prod.by1shot/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com/prodby_1shot" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://t.co/G3dLGu7HbT" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
