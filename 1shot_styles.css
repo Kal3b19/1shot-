@@ -3,7 +3,7 @@
     font-family: Permanent Marker;
 }
 .event{
-    background-image: url("music_photos/background.jpg");
+    background-image: url("/music_photos/background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
