@@ -184,8 +184,8 @@ form .btn2{
     }
     .header .fa-bars{
         display: block;
-        font-size: 45px;
-        margin-right: 0;
+        font-size: 35px;
+        margin-right: 10px;
     }
     .header ul{
         background: red;
@@ -213,17 +213,19 @@ form .btn2{
         position: absolute;
         top: 25px;
     }
+
     /* body*/
     .about_me{
         border-radius: 15px;
         color: black;
         background-color: white;
-        margin: 80px;
+        margin-top: 80px;
         max-width: 1000px;
         margin-left: 0px;
-        min-width: 450px;
+        min-width: 400px;
         font-size: 1rem;
-        line-height: 2rem;
+        line-height: 1.5rem;
+
     }
 
     .image{
@@ -237,4 +239,3 @@ form .btn2{
         flex-basis: 100%;
     }
 }
-
