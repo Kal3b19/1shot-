@@ -254,8 +254,8 @@ form .btn2{
 }
 .header .fa-bars{
     display: block;
-    font-size: 45px;
-    margin-right: 0;
+    font-size: 35px;
+    margin-right: 10px;
 }
 .header ul{
     background: red;
@@ -277,7 +277,7 @@ form .btn2{
     position: absolute;
     top: 25px;
     left: 25px;
-    font-size: 45px;
+    font-size: 35px;
     margin-bottom: 10px;
 }
 
@@ -286,12 +286,26 @@ form .btn2{
     top: 25px;
 }
 
+.title{
+    font-size: .5rem;
+}
+
 .grid{
     display: grid;
-    grid-template-columns: 400px;
-    max-width: 400px;
+    grid-template-columns: 1fr;
+    max-width: 1fr;
     min-width:  200px;
+
 }
+
+.music_info{
+    background-color: #333;
+    width: 300px;
+    padding: 25px 35px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 0px;
+  }
 
 .contact-left, 
 #contact-right{
