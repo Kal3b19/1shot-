@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    font-family: Permanent Marker;
+    color: white;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.logo{
+    font-size: 50px;
+}
+
+
+.header ul{
+    display: flex;
+    list-style-type: none;
+    
+} 
+
+.header ul li {
+    display: block;
+    padding-right: 40px;
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: .2s;
+    cursor: pointer;
+    margin: 20px 5px;
+    color: white;
+}
+
+.header ul li:hover {
+    color:white;
+    background-color: black;
+    font-size: 28px;
+
+
+}
+
+.header ul li.active{
+    background-color: black;
+}
+
+.header ul  a:link{
+    text-decoration: none;
+}
+
+.header .fa-solid{
+    display: none;
+}
+
+/* =============================  album container =============================*/
+.blue{
+    background: #000; /* Old browsers */
+    background: -moz-linear-gradient(top, #000 0%, #000 44%, #000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(44%,#000), color-stop(100%,#000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #000 0%,#000 44%,RED 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+.blue{
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.blue div{
+    background-color: #444;
+    margin-top: 120px;
+    margin-bottom: 15px;
+}
+
+
+
+/* =============================  music container =============================*/
+
+.music_container{
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    height: 500px;
+    column-gap: 15px;
+}
+
+h1{
+    text-align: center;
+    background-color: #000;
+}
+
+/* =============================  resopnsive =============================*/
+
+@media only screen and (max-width: 600px){
+    .event{
+        background-image: url("music_photos/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        width: 100%;
+        height: 100vh;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header .fa-bars{
+        display: block;
+        font-size: 25px;
+        margin: 15px;
+    }
+
+    #sidemenu{
+        background: red;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right .5s;
+        display: block;
+        font-size: 28px;
+    }
+
+    .header .fa-circle-xmark{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .header .fa-circle-xmark{
+        position: absolute;
+        top: 25px;
+    }
+
+    /* body*/
+    .music_container{
+        display: grid ;
+        grid-template-columns: 1fr;
+    }
+}
