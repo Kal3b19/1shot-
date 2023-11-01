@@ -80,9 +80,7 @@
 }
 
 .blue div{
-    background-color: #444;
     margin-top: 120px;
-    margin-bottom: 15px;
 }
 
 
@@ -93,10 +91,12 @@
     display: grid ;
     grid-template-columns: 1fr 1fr;
     background-color: black;
-    height: 500px;
     column-gap: 15px;
+    row-gap: 15px;
 }
-
+.music_container div{
+    height: 500px;
+}
 h1{
     text-align: center;
     background-color: #000;
